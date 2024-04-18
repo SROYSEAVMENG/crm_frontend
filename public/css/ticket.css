@@ -1,12 +1,3 @@
-.btn-create-ticket{
-    background-color: #6fb6df;
-    color: white;
-    width: 150px;
-    height: 52.18;
-    border: none;
-    border-radius: 4px;
-    font-size: large;}
-    /* list */
     table {
 font-family: arial, sans-serif;
 border-collapse: collapse;
@@ -21,7 +12,7 @@ padding: 8px;
 }
 
 tr:nth-child(even) {
-background-color: white;
+    background-color: var(--bg-table);
 }
 .btn-list-ticket {
 width: 90px;
@@ -32,21 +23,21 @@ border: #000 solid 1px;
 border-radius: 4px;
 border-color: rgba(250, 0, 210, 0.5);
 }
-.btn-crud-list-ticket  {
-width: 25px;
-height: 25px;
-background-color: transparent;
-border: white solid 1px;
-border-radius: 4px;
-padding: unset;
-}
+    .btn-crud-list-ticket  {
+    width: 25px;
+    height: 25px;
+    border: transparent 1px;
+    border-radius: 4px;
+    padding: unset;
+    }
 .btn-crud-list-ticket :hover {
-border-color: red;
-color: red;
-cursor: pointer;
+    border-color: red;
+    color: red;
+    cursor: pointer;
+
 }
 /* btn create lead */
-.btn-create-ticket  {
+/* .btn-create-ticket  {
     background-color: var(--primary-color);
     color: white;
     width: 150px;
@@ -54,7 +45,7 @@ cursor: pointer;
     border: none;
     border-radius: 4px;
     font-size: large;
-}
+} */
 .background-create-ticket{
     width:99%; 
     background:rgba(0,0,0,0.8);
@@ -107,6 +98,26 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webki
 .btn-create-new-ticket{
     background-color: var(--primary-color);
     color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    /* font-size: large; */
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+    position: relative;
+    left: 70px;
+}
+.btn-create-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+.btn-create-ticket{
+    background-color: var(--primary-color);
+    color: white;
     width: 150px;
     height: 40px;
     border: none;
@@ -114,6 +125,13 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webki
     font-size: large;
     cursor: pointer;
     margin: 0px 10px 0px 0px;
+}
+.btn-create-new-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
 }
     /* start css delete */
 .background-delete-ticket{
@@ -161,6 +179,14 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webki
     border: none;
     border-radius: 4px;
 }
+.btn-confirm-delete-ticket:hover,
+.btn-cancel-delete-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
 
 /* end css delete */    /* <!-------------start css crud ------------> */
 .btn-crud-list-ticket {
@@ -172,26 +198,10 @@ border-radius: 4px;
 padding: unset;
 }
 .btn-crud-list-ticket:hover {
-border-color: rgb(244, 244, 247);
-color: #3725FF;
 cursor: pointer;
+border: #000;
 }
 /* <!-------------end css crud ------------> */
-:root{
-    /* ===== Colors ===== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
    
 .ms-1 {
     margin-left: .25rem !important;
@@ -331,7 +341,104 @@ hr {
   color: black;
   border: 1px black solid;
 }
+/* start css edit */
+.background-edit-ticket{
+    width:99%; 
+    background:rgba(0,0,0,0.8);
+    height:99%;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+}  
+.content-edit-edit-ticket{
+    width: 500px;
+    height: 570px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    left: 25%;
+    bottom: -70px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+.name-edit-edit-ticket {
+padding: 10px 0px 0px 14px;
+font-size: 20px;
+}
+.icon-cancel-edit-ticket {
+padding: 10px 14px 0px 10px;
+font-size: 20px;
+cursor: pointer;
+}
+.form-control-edit-ticket{
+display: block;
+width: 100%;
+height: calc(1.5em + 0.75rem + 2px);
+padding: 9px 9px 9px 9px;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #6fb6df;
+border-radius: 0.25rem;
+-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+-o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+.form-group-edit-ticket{
+    padding: 0px 16px 10px 21px;
+}
+.btn-create-edit-ticket{
+    background-color: var(--primary-color);
+    color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    /* font-size: large; */
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+    position: relative;
+    left: 70px;
+}
+.btn-create-edit-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
 
+.btn-edit-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+.btn-edit-ticket{
+    background-color: var(--primary-color);
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+}
+.btn-edit-edit-ticket:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+
+/* end css edit */
 
 
 

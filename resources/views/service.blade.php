@@ -154,6 +154,20 @@
                 <div style="float: left;"> <p class="nameList">SERVICE</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                <img  src="../image/staff.png" alt="">							                         	
+                        </div>
+		                </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,14 +179,16 @@
   <tr>
     <th>ID</th>
     <th>Name</th>
+    <th>Description</th>
     <th>Action</th>
   </tr>
   <tr>
     <td>1</td>
     <td>Core Banking</td>
+    <td>Core Banking is a...</td>
     <td>
         <span>
-        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-service ">
+        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-service btn-edit-service">
         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>
             </button>
           </span>
@@ -189,7 +205,7 @@
 <div class="content-create-new-service">
     <div>
         <div class="a">
-            <div class="name-new-new-service" style="float:left;">ADD ATM</div>
+            <div class="name-new-new-service" style="float:left;">ADD SERVICE</div>
             <div class="icon-cancel-new-service" style="float:right;"><span><i class="fa fa-times-circle-o close-create-service" aria-hidden="true"></i></span>
             </div>
             <div style="clear:both;"></div>
@@ -198,6 +214,10 @@
     <form action="#" class="signin-form">
         <div class="form-group-new-service" style="float:left; width:100% ">
             <label class="label" for="name-company">Name Company *</label>
+            <input type="text" class="form-control-new-service"  required>
+        </div>
+        <div class="form-group-new-service" style="float:left; width:100% ">
+            <label class="label" for="name-company">Description *</label>
             <input type="text" class="form-control-new-service"  required>
         </div>
         <div>
@@ -221,20 +241,54 @@
     </div>  
     </div>
         <!------------ end of delete atm ----------------->
+        <!-- edit atn -->
+<div class="background-edit-service">
+<div class="content-edit-new-service">
+    <div>
+        <div class="a">
+            <div class="name-new-new-service" style="float:left;">EDIT SERVICE</div>
+            <div class="icon-cancel-new-service-edit" style="float:right;"><span><i class="fa fa-times-circle-o close-edit-service" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <form action="#" class="signin-form">
+        <div class="form-group-new-service" style="float:left; width:100% ">
+            <label class="label" for="name-company">Name Company *</label>
+            <input type="text" class="form-control-new-service"  required>
+        </div>
+        <div class="form-group-new-service" style="float:left; width:100% ">
+            <label class="label" for="name-company">Description *</label>
+            <input type="text" class="form-control-new-service"  required>
+        </div>
+        <div>
+            <button class="btn-submit-service-edit">SAVE</button>
+        </div>
+    </form>
+
+</div>
+</div>
+<!-- end service -->            
+
             </div>
             </div>
         </nav>
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
+        // Start pf dropdown 
+      const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
+        
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -275,6 +329,14 @@
     btn_delete_service.onclick = () => {
         pop_up2222222.style.display = "block"
         btn_cancel_delete_service.onclick = () => pop_up2222222.style.display = "none"
+    }
+    let pop_up3333333 = document.querySelector(".background-edit-service")
+    let btn_edit_service = document.querySelector(".btn-edit-service")
+    let btn_cancel_edit_service = document.querySelector(".icon-cancel-new-service-edit")
+
+    btn_edit_service.onclick = () => {
+        pop_up3333333.style.display = "block"
+        btn_cancel_edit_service.onclick = () => pop_up3333333.style.display = "none"
     }
 
 

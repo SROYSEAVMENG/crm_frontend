@@ -33,10 +33,15 @@ body {
     height: 14.8cm;  
   }
   @media print {
-    body, page {
+    page {
       background: white;
-      margin: 0;
-      box-shadow: 0;
+      box-shadow: none;
+    }
+    .save-report-bti{
+      display: none;
+    }
+    .exit-report-bti{
+      display: none;
     }
   }
   .p{
@@ -152,4 +157,55 @@ body {
   .item-div-11bti{
     flex: 1;
     margin: 20px 0px 0px 19px;
+  }
+  :root {
+    /* ===== Colors ===== */
+    --body-color: #e4e9f7;
+    --sidebar-color: #fff;
+    --primary-color: #695cfe;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+  .div-btn{
+    background: white;
+    position: relative;
+    right:  355px;
+  }
+  .save-report-bti{
+    background-color: var(--primary-color);
+    color: white;
+    border: transparent;
+    width: 100px;
+    border-radius: 4px;
+    height: 30px;
+    position: relative;
+    float: right;
+    margin: 10px 10px 10px 10px;
+  }
+  .exit-report-bti{
+    background-color: var(--primary-color);
+    color: white;
+    border: transparent;
+    width: 100px;
+    border-radius: 4px;
+    height: 30px;
+    position: relative;
+    float: right;
+    margin: 10px 10px 10px 10px;
+
+  }
+  .save-report-bti:hover,
+  .exit-report-bti:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
   }

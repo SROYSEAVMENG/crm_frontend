@@ -64,6 +64,31 @@ class HomeController extends Controller
     public function permission(){
         return View('permission');
     }
+    public function viewReportPm(){
+        return View('viewReportPm');
+    }
+    public function viewReportBti(){
+        return View('viewReportBti');
+    }
+    public function listingServiceCustomer(){
+        return View('listingServiceCustomer');
+    }
+    public function listingCallCustomer(){
+        return View('listingCallCustomer');
+    }
+    public function listingAppointmentCustomer(){
+        return View('listingAppointmentCustomer');
+    }
+    public function listingQuotationCustomer(){
+        return View('listingQuotationCustomer');
+    }
+    public function listingDocumentCustomer(){
+        return View('listingDocumentCustomer');
+    }
+    public function profile(){
+        return View('profile');
+    }
+
 
 
 

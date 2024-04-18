@@ -157,6 +157,20 @@
                 <div style="float: left;"> <p class="nameList">STAFF</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                <img  src="../image/staff.png" alt="">							  
+                      	</div>
+		                </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -190,7 +204,7 @@
                         </button>
                     </span>
                     <span >
-                        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-staff ">
+                        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-staff btn-edit-staff">
                         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>
                         </button>
                     </span>
@@ -434,6 +448,72 @@
         </div>
 </div>
  <!------------ end of dview staff ----------------->
+<!------------- Form edit staff ------------>
+<div class="background-edit-staff">
+<div class="content-edit-new-staff-edit">
+    <div>
+        <div class="a">
+            <div class="name-new-new-staff-edit" style="float:left;">EDIT STAFF</div>
+            <div class="icon-cancel-new-staff-edit" style="float:right;"><span><i class="fa fa-times-circle-o close-create-staff" aria-hidden="true"></i>
+            </span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <form action="#" class="signin-form">
+        <div class="form-group-new-staff-edit " style="float:left; ">
+            <label class="label" for="Username">Username *</label>
+            <input type="text" class="form-control-new-staff-edit"  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="float:right; ">
+            <label class="label" for="email-company">Email *</label>
+            <input type="email" class="form-control-new-staff-edit" required>
+        </div>
+        <div class="form-group-new-staff-edit" style="float:left;">
+            <label class="label" for="phone-number-company">Password *</label>
+            <input type="password" class="form-control-new-staff-edit"  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="float:right;">
+            <label class="label" for="Confirm Password">Confirm Password *</label>
+            <input type="password" class="form-control-new-staff-edit"  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="float:left; width: 48%;">
+            <label  class="label label1" for="Department">Department *</label>
+            <select name="input-by" class="form-control-new-staff-edit" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+            <div class="form-group-new-staff-edit" style="float:right; width: 48%;">
+                <label  class="label" for="Role">Role *</label>
+                <select name="Role" class="form-control-new-staff-edit" required>
+                  <option value=""></option>
+                  <option value="Sale A">Sale A</option>
+                  <option value="Sale B">Sale B</option>
+                  <option value="Sale C">Sale C</option>
+                </select></div>    
+        <div class="form-group-new-staff-edit" style="float:left;">
+            <label class="label" for="Address">Address *</label>
+            <input type="text" class="form-control-new-staff-edit"  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="float:right;">
+            <label class="label" for="Phone Number">Phone Number *</label>
+            <input type="number" class="form-control-new-staff-edit"  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="width: 94%;">
+            <label class="label" for="description-company">Description *</label>
+            <input style="height: 80px;" type="text" class="form-control-des-new-staff-edit "  required>
+        </div>
+        <div class="form-group-new-staff-edit" style="padding: 18px 12px 0px 0px;float:right;">
+            <button class="btn-edit-new-staff-submit">SAVE</button>
+        </div>
+
+    </form>
+
+</div>
+</div>
+        <!------------ end of create staff ----------------->
 
 
             </div>
@@ -442,14 +522,6 @@
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -527,8 +599,30 @@ showSocial('card-toggle','card-social')
         btn_cancel_view_staff .onclick = () => pop_up3.style.display = "none"
     }
 
-            //end popup ncreate
 
+
+    let pop_up4 = document.querySelector(".background-edit-staff")
+    let btn_edit_staff = document.querySelector(".btn-edit-staff")
+    let btn_cancel_edit_staff  = document.querySelector(".icon-cancel-new-staff-edit")
+
+    btn_edit_staff .onclick = () => {
+        pop_up4.style.display = "block"
+        btn_cancel_edit_staff .onclick = () => pop_up4.style.display = "none"
+    }
+
+            //end popup ncreate
+    // Start pf dropdown 
+    const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
 </body>
 

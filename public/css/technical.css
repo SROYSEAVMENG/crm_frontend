@@ -95,11 +95,10 @@
 .btn-list-rep-pm:hover
 {
     cursor: pointer;
-    border-radius: solid 4px;
-    border: none;
-    background-color: var(--primary-color-light);
     color: black;
-
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
 }
 .btn-create-bti{
     background-color: var(--primary-color);
@@ -113,23 +112,6 @@
     right: 50px;
     top: -2px;
 
-}
-
-
-:root{
-/* ===== Colors ===== */
---body-color: #E4E9F7;
---sidebar-color: #FFF;
---primary-color: #695CFE;
---primary-color-light: #F6F5FF;
---toggle-color: #DDD;
---text-color: #707070;
-
-/* ====== Transition ====== */
---tran-03: all 0.2s ease;
---tran-03: all 0.3s ease;
---tran-04: all 0.3s ease;
---tran-05: all 0.3s ease;
 }
 .btn-create-technical{
     background-color: var(--primary-color);

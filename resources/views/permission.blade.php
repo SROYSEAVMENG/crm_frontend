@@ -154,6 +154,20 @@
                 <div style="float: left;"> <p class="nameList">PERMISSION</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                <img  src="../image/staff.png" alt="">							  
+                      	</div>
+		                </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -176,7 +190,7 @@
     <td>25/03/2024</td>
     <td>
         <span>
-        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-permission ">
+        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-permission btn-edit-permission">
         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>
             </button>
           </span>
@@ -193,7 +207,7 @@
 <div class="content-create-new-permission">
     <div>
         <div class="a">
-            <div class="name-new-new-permission" style="float:left;">ADD ATM</div>
+            <div class="name-new-new-permission" style="float:left;">ADD PERMISSION</div>
             <div class="icon-cancel-new-permission" style="float:right;"><span><i class="fa fa-times-circle-o close-create-permission" aria-hidden="true"></i></span>
             </div>
             <div style="clear:both;"></div>
@@ -226,7 +240,7 @@
 </div>
 <!-- end service -->            
 <!------------- Form delete service ------------>
-    <div class="background-delete-permission">
+<div class="background-delete-permission">
     <div class="delete-dev-permission">
         <div class="all-div-permission" style="padding:25px 0px 0px 0px ;">
         <h2 class="text-delete-permission" style="font-size: 20px;">Do you want to delete this permission?</h2>
@@ -236,22 +250,52 @@
         </div>
         </div>
     </div>  
+</div>
+<!------------ end of delete atm ----------------->
+<!-- edit atn -->
+<div class="background-edit-permission">
+<div class="content-edit-new-permission">
+    <div>
+        <div class="a">
+            <div class="name-edit-new-permission" style="float:left;">EDIT PERMISSION</div>
+            <div class="icon-cancel-edit-permission" style="float:right;"><span><i class="fa fa-times-circle-o close-edit-permission" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
     </div>
-        <!------------ end of delete atm ----------------->
+    <form action="#" class="signin-form">
+        <div class="form-group-edit-permission" style="float:left; width:100% ">
+            <label class="label" for="name-company">Name *</label>
+            <input type="text" class="form-control-edit-permission"  required>
+        </div>
+        <div class="form-group-edit-permission" style="float:left; width:100% ">
+        <label  class="label" for="Department">Assign to *</label>
+            <select name="input-by" class="form-control-edit-permission" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select>
+        </div>
+        <div class="form-group-edit-permission" style="float:left; width:100% ">
+            <label class="label" for="name-company">Create date *</label>
+            <input type="date" class="form-control-edit-permission"  required>
+        </div>
+        <div>
+            <button class="btn-submit-permission-edit">SAVE</button>
+        </div>
+    </form>
+
+</div>
+</div>
+<!-- end service -->            
+
             </div>
             </div>
         </nav>
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -294,9 +338,27 @@
         btn_cancel_delete_permission.onclick = () => pop_up222222222.style.display = "none"
     }
 
+    let pop_up333333333 = document.querySelector(".background-edit-permission")
+    let btn_edit_permission = document.querySelector(".btn-edit-permission")
+    let btn_cancel_edit_permission = document.querySelector(".icon-cancel-edit-permission")
 
-
+    btn_edit_permission.onclick = () => {
+        pop_up333333333.style.display = "block"
+        btn_cancel_edit_permission.onclick = () => pop_up333333333.style.display = "none"
+    }
             //end popup ncreate
+    // Start pf dropdown 
+    const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
 </body>
 

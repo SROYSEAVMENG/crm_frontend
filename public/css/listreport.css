@@ -27,3 +27,138 @@
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 }
+.back-page1:hover,
+.back-page2:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+.btn-crud-list-report-pm,
+.btn-crud-list-report-bti {
+    width: 25px;
+    height: 25px;
+    border: #f9f6f6 solid 1px;
+    border-radius: 4px;
+    padding: unset;
+}
+.btn-crud-list-report-pm:hover,
+.btn-crud-list-report-bti:hover {
+    border: black;
+    cursor: pointer;
+}
+/* start css delete pm*/
+
+.background-delete-report-pm{
+    width:99%; 
+    background:rgba(0,0,0,0.8);
+    height:99%;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+}
+.delete-dev-report-pm{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    left: 35%;
+    bottom: -200px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+.btn-dev-report-pm{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.text-delete-report-pm{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.btn-confirm-delete-report-pm , .btn-cancel-delete-report-pm {
+    width: 90px;
+    height: 30px;
+}
+.btn-cancel-delete-report-pm {
+    background-color: #3F5FFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn-confirm-delete-report-pm{
+    background-color: #F81616;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn-cancel-delete-report-pm:hover,
+.btn-confirm-delete-report-pm:hover{
+  background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+
+/* end css delete pm*/
+/* start css delete bti*/
+
+.background-delete-report-bti{
+    width:99%; 
+    background:rgba(0,0,0,0.8);
+    height:99%;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+}
+.delete-dev-report-bti{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    left: 35%;
+    bottom: -200px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+.btn-dev-report-bti{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.text-delete-report-bti{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.btn-confirm-delete-report-bti , .btn-cancel-delete-report-bti {
+    width: 90px;
+    height: 30px;
+}
+.btn-cancel-delete-report-bti {
+    background-color: #3F5FFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn-confirm-delete-report-bti{
+    background-color: #F81616;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn-cancel-delete-report-bti:hover,
+.btn-confirm-delete-report-bti:hover{
+  background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+
+/* end css delete */

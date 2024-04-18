@@ -155,6 +155,20 @@
                 <div style="float: left;"> <p class="nameList">TECHNICAL</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                <img  src="../image/staff.png" alt="">							  
+                      	</div>
+		                </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,8 +257,20 @@
     //             modeText.innerText = "Dark mode";
     //         }
     //     });
-
+// Start pf dropdown 
+const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
+    
     <script src="{{ asset('js/sidebarIntech.js')}}" ></script>
 </body>
 

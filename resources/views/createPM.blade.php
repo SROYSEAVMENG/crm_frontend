@@ -385,6 +385,17 @@
       </div>
       <hr>
     </page>
+    <div class="div-btn">
+    <div>
+      <button class="save-report-pm">SAVE</button>
+    </div>
+    <div>
+      <a href="technical">
+      <button class="exit-report-pm">EXIT</button>
+      </a>
+    </div>
+    </div>
+
     <!-- <div><button>SAVE</button></div> -->
 <script src="scrip.js"></script>
     <!-- <page size="A4"></page>

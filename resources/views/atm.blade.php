@@ -155,6 +155,20 @@
                 <div style="float: left;"> <p class="nameList">ATM</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">
+										  <img  src="../image/staff.png" alt="">
+									    </div >
+                      </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -168,6 +182,7 @@
     <th>Name Company</th>
     <th>Model</th>
     <th>Type</th>
+    
     <th>Action</th>
   </tr>
   <tr>
@@ -182,7 +197,7 @@
             </button>
           </span>
         <span>
-        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-atm ">
+        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-atm btn-edit-atm">
         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>
             </button>
           </span>
@@ -193,7 +208,8 @@
           </span>
     </td>
   </tr>
-</table>      
+
+  
 <!-- create atn -->
 <div class="background-create-atm">
 <div class="content-create-new-atm">
@@ -364,6 +380,74 @@
         </div>
     </div>
         <!------------ end of view customer ----------------->
+<!-- edit  atn -->
+<div class="background-edit-atm">
+<div class="content-edit-edit-atm">
+    <div>
+        <div class="a">
+            <div class="name-edit-edit-atm" style="float:left;">EDIT ATM</div>
+            <div class="icon-cancel-edit-atm" style="float:right;"><span><i class="fa fa-times-circle-o close-edit-atm" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <form action="#" class="signin-form">
+        <div class="form-group-edit-atm" style="float:left; width:50% ">
+            <label class="label" for="name-company">Name Company *</label>
+            <input type="text" class="form-control-edit-atm"  required>
+        </div>
+        <div class="form-group-edit-atm" style="float:right;  width:50%  ">
+            <label class="label" for="model">Model *</label>
+            <input type="text" class="form-control-edit-atm"  required>
+        </div>
+        <div class="form-group-edit-atm" style="float:left;  width:50% ">
+            <label  class="label" for="Classification">Classification *</label>
+            <select name="Classification" class="form-control-edit-atm">
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+            <div class="form-group-edit-atm" style="float:right; width:50% ">
+                <label  class="label" for="type">Type *</label>
+                <select name="type" class="form-control-edit-atm">
+                  <option value=""></option>
+                  <option value="Sale A">Sale A</option>
+                  <option value="Sale B">Sale B</option>
+                  <option value="Sale C">Sale C</option>
+                </select></div>
+                <div class="form-group-edit-atm" style="float:left; width:50% ">
+                    <label  class="label" for="Category">Category *</label>
+                    <select name="Category" class="form-control-edit-atm" required>
+                      <option value=""></option>
+                      <option value="Sale A">Sale A</option>
+                      <option value="Sale B">Sale B</option>
+                      <option value="Sale C">Sale C</option>
+                    </select></div>
+                <div class="form-group-edit-atm" style="float:right;  width:50% ">
+            <label class="label" for="address-company">Address *</label>
+            <input type="text" class="form-control-edit-atm" required>
+        </div>
+        <div class="form-group-edit-atm" style="float:left; width:50% ">
+            <label  class="label" for="City">City *</label>
+            <select name="City" class="form-control-edit-atm" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+        <div class="form-group-edit-atm" style="float:right; width:50% ">
+            <label class="label" for="file">Upload logo *</label>
+            <input type="file" class="form-control-edit-atm" required>
+        </div>
+        <div>
+            <button class="btn-submit-atm-edit">SAVE</button>
+        </div>
+    </form>
+
+</div>
+</div>
+<!-- end edit atm -->            
 
 
 
@@ -372,7 +456,7 @@
         </nav>
     </section>
     <script>
-
+        // Start pf dropdown 
         const dropWrapper = document.querySelectorAll('.drop-wrapper')
         dropWrapper.forEach((element) => {
             const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
@@ -380,7 +464,8 @@
             element.addEventListener('click', function () {
                 dropElement.classList.toggle('show');
             });
-        })
+        })  //End dropdown pf
+
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -433,7 +518,21 @@
         pop_up33333.style.display = "block"
         btn_cancel_view_atm.onclick = () => pop_up33333.style.display = "none"
     }
-            //end popup ncreate
+
+    let pop_up44444 = document.querySelector(".background-edit-atm")
+    let btn_edit_atm = document.querySelector(".btn-edit-atm")
+    let btn_cancel_edit_atm = document.querySelector(".icon-cancel-edit-atm")
+
+    btn_edit_atm.onclick = () => {
+        pop_up44444.style.display = "block"
+        btn_cancel_edit_atm.onclick = () => pop_up44444.style.display = "none"
+    }
+
+    //end popup ncreate
+   
+  function myFunction1() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
     </script>
 </body>
 

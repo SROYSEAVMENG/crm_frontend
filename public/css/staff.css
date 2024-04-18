@@ -1,29 +1,19 @@
-:root{
-    /* ===== Colors ===== */
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
 .btn-create-new-staff-submit{
     background-color: var(--primary-color);
     color: white;
-    width: 150px;
-    height: 40px;
+    width: 80px;
+    height: 30px;
     border: none;
     border-radius: 4px;
-    font-size: large;
+    /* font-size: large; */
 }
 .btn-create-new-staff-submit:hover{
     cursor: pointer;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
 }
 /* <!------------- Form Create staff ------------> */
 .background-create-staff{
@@ -36,7 +26,7 @@
 }
     .content-create-new-staff-create{
     width: 500px;
-    height: 470px;
+    height: 450px;
     background-color: rgb(255, 255, 255);
     border:none;
     border-radius: 4px;
@@ -94,6 +84,13 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webki
     font-size: large;
     cursor: pointer;
     margin: 0px 10px 0px 0px;
+}
+.btn-create-new-staff:hover{
+  background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
 }
 .form-control-des-new-staff-create{
 display: block;
@@ -161,6 +158,14 @@ transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webki
     border: none;
     border-radius: 4px;
 }
+.btn-cancel-delete-staff:hover,
+.btn-confirm-delete-staff:hover{
+  background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
 
 /* end css delete */
 /* <!-------------start css crud ------------> */
@@ -173,9 +178,8 @@ border-radius: 4px;
 padding: unset;
 }
 .btn-crud-list-staff:hover {
-    border-color: rgb(244, 244, 247);
-    color: #3725FF;
     cursor: pointer;
+    border: black;
 }
     /* <!-------------end css crud ------------> */
 
@@ -221,6 +225,9 @@ padding: unset;
   display: grid;
   place-items: center;
   margin: 0 auto 0.75rem;
+  position: relative;
+  left: 30px;
+
 }
 .card__name {
   color: var(--primary-color);
@@ -234,7 +241,7 @@ padding: unset;
 }
 .card__social{
   width: 450px;
-  background-color: var(--first-color);
+  background-color: white;
   /* padding: 0.75rem; */
   border-radius: 10px;
   text-align: initial;
@@ -377,3 +384,97 @@ padding: unset;
   border: black solid 1px;
 
 }
+
+
+/* <!------------- Form edit staff ------------> */
+.background-edit-staff{
+  width:99%; 
+  background:rgba(0,0,0,0.8);
+  height:99%;
+  position: absolute;
+  bottom: 10px;
+  display: none;
+}
+  .content-edit-new-staff-edit{
+  width: 500px;
+  height: 450px;
+  background-color: rgb(255, 255, 255);
+  border:none;
+  border-radius: 4px;
+  position: relative;
+  left: 25%;
+  bottom: -110px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5), inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+
+}
+.name-new-new-staff-edit {
+padding: 10px 0px 0px 14px;
+font-size: 20px;
+}
+.icon-cancel-new-staff-edit {
+padding: 10px 14px 0px 10px;
+font-size: 20px;
+cursor: pointer;
+}
+input.form-control-des-new-staff-edit{
+font-size: small;
+}
+.form-control-new-staff-edit ,.file{
+display: block;
+width: 100%;
+height: calc(1.5em + 0.75rem + 2px);
+padding: 9px 9px 9px 9px;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #6fb6df;
+border-radius: 0.25rem;
+-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+-o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+.form-group-new-staff-edit{
+  padding: 0px 10px 0px 10px;
+}
+
+.btn-edit-new-staff-submit{
+  background-color:var(--primary-color);
+  color: white;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  /* font-size: large; */
+  cursor: pointer;
+  margin: 0px 10px 0px 0px;
+}
+.btn-edit-new-staff-submit:hover{
+background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid black;
+  color: black;
+  border: black solid 1px;
+}
+.form-control-des-new-staff-edit{
+display: block;
+width: 107%;
+height: calc(1.5em + 0.75rem + 2px);
+padding: 0px 9px 40px 9px;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.5;
+color: #495057;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid #6fb6df;
+border-radius: 0.25rem;
+-webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+-o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+/* <!------------ end of edit staff -----------------> */

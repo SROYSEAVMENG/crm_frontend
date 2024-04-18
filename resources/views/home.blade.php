@@ -10,6 +10,7 @@
     <!----======== CSS ======== -->
     <!-- <link rel="stylesheet" href="../../public/css/style.css"> -->
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="profile.blade.php">
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
 
-    <title>Dashboard Sidebar Menu</title>
+<title>Dashboard Sidebar Menu</title>
 </head>
 <body>
     <nav class="sidebar">
@@ -30,12 +31,10 @@
                 <span class="image">
                     <img src="../image/deam.png" alt="">
                 </span>
-
                 <div class="text logo-text">
                     <span class="logo">CRM</span>
                 </div>
             </div>
-
             <i class='bx bx-chevron-right toggle'></i>
         </header>
 
@@ -113,7 +112,7 @@
 
 
                     <li class="nav-link">
-                        <a href="cslendar">
+                        <a href="calendar">
                             <i class='bx bx-calendar icon' ></i>
                             <span class="text nav-text">Calender</span>
                         </a>
@@ -152,6 +151,20 @@
                 <div style="float: left;"> <p class="nameList"></p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">
+                        <img  src="../image/staff.png" alt="">
+                        </div >
+                      </div>
+                      <div class="listing">
+                      <a href="profile"><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,14 +172,7 @@
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
+ 
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -193,10 +199,20 @@ modeSwitch.addEventListener("click" , () =>{
     }else{
         modeText.innerText = "Dark mode";
         
-    }
+    } 
 });
-        // end sidebar
+
+
+document.addEventListener('DOMContentLoaded', function() {
+      var popupButtons = document.querySelectorAll('.popup-button');
+      popupButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+          window.open('profile', 'Popup', 'width=400,height=400');
+        });
+      });
+    });
     </script>
+    <script src="{{asset('js/dropdownPf.js')}}"></script>
     
 </body>
 

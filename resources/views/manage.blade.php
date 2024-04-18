@@ -154,6 +154,20 @@
                 <div style="float: left;"> <p class="nameList">ROLE</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                <img  src="../image/staff.png" alt="">							  
+                      	</div>
+		                </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -174,7 +188,7 @@
     <td>25/03/2024</td>
     <td>
         <span>
-        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-role ">
+        <button style="background-color: #67A7CC;border-radius:4px;" class="btn-crud-list-role btn-edit-role">
         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>
             </button>
           </span>
@@ -191,7 +205,7 @@
 <div class="content-create-new-role">
     <div>
         <div class="a">
-            <div class="name-new-new-role" style="float:left;">ADD ATM</div>
+            <div class="name-new-new-role" style="float:left;">ADD ROLE</div>
             <div class="icon-cancel-new-role" style="float:right;"><span><i class="fa fa-times-circle-o close-create-role" aria-hidden="true"></i></span>
             </div>
             <div style="clear:both;"></div>
@@ -215,7 +229,7 @@
 </div>
 <!-- end service -->            
 <!------------- Form delete service ------------>
-    <div class="background-delete-role">
+<div class="background-delete-role">
     <div class="delete-dev-role">
         <div class="all-div-role" style="padding:25px 0px 0px 0px ;">
         <h2 class="text-delete-role" style="font-size: 20px;">Do you want to delete this role?</h2>
@@ -225,22 +239,45 @@
         </div>
         </div>
     </div>  
+</div>
+<!------------ end of delete atm ----------------->
+
+<!-- edit role  role-->
+<div class="background-edit-role">
+<div class="content-edit-new-role">
+    <div>
+        <div class="a">
+            <div class="name-new-new-role" style="float:left;">EDIT ROLE</div>
+            <div class="icon-cancel-edit-role" style="float:right;"><span><i class="fa fa-times-circle-o close-edit-role" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
     </div>
-        <!------------ end of delete atm ----------------->
+    <form action="#" class="signin-form">
+        <div class="form-group-edit-role" style="float:left; width:100% ">
+            <label class="label" for="name-company">Name *</label>
+            <input type="text" class="form-control-edit-role"  required>
+        </div>
+        <div class="form-group-edit-role" style="float:left; width:100% ">
+            <label class="label" for="name-company">Create date *</label>
+            <input type="date" class="form-control-edit-role"  required>
+        </div>
+        <div>
+            <button class="btn-submit-role-edit">SAVE</button>
+        </div>
+    </form>
+
+</div>
+</div>
+<!-- end edit role -->            
+
             </div>
             </div>
         </nav>
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
+        
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -284,8 +321,28 @@
     }
 
 
+    let pop_up33333333 = document.querySelector(".background-edit-role")
+    let btn_edit_role = document.querySelector(".btn-edit-role")
+    let btn_cancel_edit_role = document.querySelector(".icon-cancel-edit-role")
 
+    btn_edit_role.onclick = () => {
+        pop_up33333333.style.display = "block"
+        btn_cancel_edit_role.onclick = () => pop_up33333333.style.display = "none"
+    }
             //end popup ncreate
+
+     // Start pf dropdown 
+     const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
 </body>
 

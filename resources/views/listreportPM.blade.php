@@ -156,6 +156,9 @@
                 <div style="float: left;"> <p class="nameList">PM REPORT</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile">
+                      <img src="../image/staff.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -165,40 +168,56 @@
         <a href="technical">
             <button class="back-page1">Exit</button></div> 
         </a>
-        <!-- <table>
+        <table>
   <tr>
     <th>ID</th>
-    <th>Name Company</th>
-    <th>Service</th>
-    <th>Contact no</th>
-    <th>Input by</th>
+    <th>Customer Name</th>
+    <th>ATM/CRM Model</th>
+    <th>ATM/CRM SN/ID</th>
+    <th>Maintenace date</th>
     <th>Action</th>
   </tr>
   <tr>
     <td>1</td>
-    <td>Prince Bank</td>
-    <td>STMCRM purchased</td>
-    <td>096785434</td>
-    <td>Sale A</td>
+    <td>ABA Bank</td>
+    <td>ATM</td>
+    <td>090</td>
+    <td>23/03/2024</td>
     <td>
         <span>
-        <button class="btn-crud-list-sale" style="background-color: #67A7CC; border-radius: 4px;">
-        <i style="color: white;" class="fa fa-eye" aria-hidden="true"></i>            </button>
-            </button>
+            <a href="viewReportPm">
+        <button class="btn-crud-list-report-pm" style="background-color: #67A7CC; border-radius: 4px;">
+        <i style="color: white;" class="fa fa-eye" aria-hidden="true"></i>            </button></a>
+            
           </span>
         <span>
-        <button class="btn-crud-list-sale" style="background-color: #67A7CC; border-radius: 4px;">
+        <!-- <button class="btn-crud-list-report" style="background-color: #67A7CC; border-radius: 4px;">
         <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>            </button>
-            </button>
+            </button> -->
           </span>
           <span>
-          <button class="btn-crud-list-sale btn-delete-sale"style="background-color: #F60E0E;border-radius: 4px;">
+          <button class="btn-crud-list-report-pm btn-delete-report-pm"style="background-color: #F60E0E;border-radius: 4px;">
           <i  style="color: white;" class="fa fa-trash-o " aria-hidden="true"></i>            </button>
             </button>
           </span>
     </td>
   </tr>
-</table> -->
+</table>
+
+<!------------- Form delete service ------------>
+<div class="background-delete-report-pm">
+    <div class="delete-dev-report-pm">
+        <div class="all-div-report-pm" style="padding:25px 0px 0px 0px ;">
+        <h2 class="text-delete-report-pm" style="font-size: 20px;">Do you want to delete this report?</h2>
+        <div class="btn-dev-report-pm">
+        <button class="btn-cancel-delete-report-pm">Cancel</button>
+        <button class="btn-confirm-delete-report-pm">Delete</button>
+        </div>
+        </div>
+    </div>  
+    </div>
+        <!------------ end of delete atm ----------------->
+
 
     </div>
     </div>
@@ -237,6 +256,14 @@
             }
         });
         // end sidebar
+    let pop_up12 = document.querySelector(".background-delete-report-pm")
+    let btn_delete_report_pm = document.querySelector(".btn-delete-report-pm")
+    let btn_cancel_delete_report_pm = document.querySelector(".btn-cancel-delete-report-pm")
+
+    btn_delete_report_pm.onclick = () => {
+        pop_up12.style.display = "block"
+        btn_cancel_delete_report_pm.onclick = () => pop_up12.style.display = "none"
+    }
 
     </script>
         <script src="{{ asset('js/sidebarIntech.js')}}" ></script>

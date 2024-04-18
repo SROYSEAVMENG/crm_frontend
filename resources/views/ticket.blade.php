@@ -155,10 +155,24 @@
                 <div style="float: left;"> <p class="nameList">TICKET</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">								  
+		                    <img  src="../image/staff.png" alt="">							  
+                      	</div>
+		                    </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="float:right;" ><button class="create-lead btn-create-new-ticket" ><i class='bx bxs-plus-circle'></i>&nbsp;&nbsp;TICKET</button></div>
+        <div style="float:right;" ><button class="create-lead btn-create-ticket" ><i class='bx bxs-plus-circle'></i>&nbsp;&nbsp;TICKET</button></div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">    
 
@@ -184,7 +198,7 @@
             </button>
           </span>
         <span>
-            <button class="btn-crud-list-ticket " style="background-color: #67A7CC; ">
+            <button class="btn-crud-list-ticket btn-crud-edit-ticket" style="background-color: #67A7CC; ">
             <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>            </button>
             </button>
           </span>
@@ -303,9 +317,7 @@
 
               <div class="detail" style="float: left;"><p class="p-detail">TICKET DETAILS</p></div>
               <div style="float: right;">
-              <button class="menu-view ">
-                  <i class='bx bx-menu'></i>
-              </button>
+              
             </div>
          
             <div class="card-body text-center">
@@ -438,8 +450,96 @@
             </div>
           </div>
         </div>
- </div>
+</div>
         <!------------ end of view customer ----------------->
+    <!-- start edit -->
+    <div class="background-edit-ticket">
+<div class="content-edit-edit-ticket">
+    <div>
+        <div class="a">
+            <div class="name-edit-edit-ticket" style="float:left;">EDIT TICKET</div>
+            <div class="icon-cancel-edit-ticket" style="float:right;"><span><i class="fa fa-times-circle-o close-edit-customer" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <form action="#" class="signin-form">
+        <div class="form-group-edit-ticket" style="float:left; width: 50%; ">
+            <label class="label" for="ATM ID">ATM ID *</label>
+            <input type="text" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:right; width: 50%; ">
+            <label class="label" for="Source">Source *</label>
+            <input type="email" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:left; width: 50%;">
+            <label class="label" for="phone-number-company">Phone Number *</label>
+            <input type="number" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:right; width: 50%;">
+            <label  class="label" for="Call Type">Call Type *</label>
+            <select name="Call Type" class="form-control-edit-ticket" required>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+        <div class="form-group-edit-ticket" style="float:left;  width:  50%;">
+            <label class="label" for="Call Date">Call Date *</label>
+            <input type="date" class="form-control-edit-ticket" required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:right; width: 50%;">
+            <label class="label" for="Status">Status *</label>
+            <input type="text" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:left; width: 50%;">
+            <label class="label" for="Address">Address *</label>
+            <input type="text" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:right; width:  50%;">
+            <label  class="label" for="City">City *</label>
+            <select name="input-by" class="form-control-edit-ticket" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+            <div class="form-group-edit-ticket" style="float:left; width:  50%;">
+                <label  class="label" for="Sub Call Type">Sub Call Type *</label>
+                <select name="Sub Call Type" class="form-control-edit-ticket" required>
+                  <option value=""></option>
+                  <option value="Sale A">Sale A</option>
+                  <option value="Sale B">Sale B</option>
+                  <option value="Sale C">Sale C</option>
+                </select></div>    
+        <div class="form-group-edit-ticket" style="float:right; width: 50%;">
+            <label class="label" for="Diagnoise">Diagnoise *</label>
+            <input type="text" class="form-control-edit-ticket"  required>
+        </div>
+        <div class="form-group-edit-ticket" style="float:left; width:  50%;">
+            <label  class="label" for="Vendor">Vendor *</label>
+            <select name="Vendor" class="form-control-edit-ticket" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+
+        <div class="form-group-edit-ticket" style="float:right; width:  50%;">
+            <label  class="label" for="input-by">Input by *</label>
+            <select name="input-by" class="form-control-edit-ticket" required>
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+        <div class="form-group-edit-ticket" style="padding: 10px 0px 0px 335px;">
+            <button class="btn-create-edit-ticket">SAVE</button>
+        </div>
+
+    </form>
+</div>
+</div>       
+<!------------- end edit ticket ------------>
 
 
 
@@ -451,14 +551,6 @@
     </section>
     <script>
 
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
         // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -483,7 +575,7 @@
         });
         // end sidebar
         let pop_up1111 = document.querySelector(".background-create-ticket")
-    let create_ticket_button = document.querySelector(".btn-create-new-ticket")
+    let create_ticket_button = document.querySelector(".btn-create-ticket")
     let close_create_ticket = document.querySelector(".icon-cancel-new-ticket")
 
     create_ticket_button.onclick = () => {
@@ -509,6 +601,28 @@
         btn_cancel_view_ticket.onclick = () => pop_up3333.style.display = "none"
     }
 
+    let pop_up4444 = document.querySelector(".background-edit-ticket")
+    let btn_edit_ticket = document.querySelector(".btn-crud-edit-ticket")
+    let btn_cancel_edit_ticket = document.querySelector(".icon-cancel-edit-ticket")
+
+    btn_edit_ticket.onclick = () => {
+        pop_up4444.style.display = "block"
+        btn_cancel_edit_ticket.onclick = () => pop_up4444.style.display = "none"
+    }
+
+
+    // Start pf dropdown 
+    const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
 </body>
 

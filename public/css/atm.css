@@ -1,12 +1,12 @@
-.btn-create-atm {
+/* .btn-create-atm {
     background-color: #6fb6df;
     color: white;
-    width: 150px;
+    width: 80px;
     height: 52.18;
     border: none;
     border-radius: 4px;
     font-size: large;
-}
+} */
 /* <!-------------start css crud ------------> */
 .btn-crud-list-atm {
     width: 25px;
@@ -16,8 +16,8 @@
     padding: unset;
 }
 .btn-crud-list-atm:hover {
-    border-color: rgb(244, 244, 247);
     cursor: pointer;
+    border: black;
 }
 /* <!-------------end css crud ------------> */
 .background-create-atm{
@@ -31,7 +31,7 @@
 }
 .content-create-new-atm {
     width: 500px;
-    height: 440px;
+    height: 420px;
     background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 4px;
@@ -91,6 +91,13 @@ label {
     cursor: pointer;
     margin: 0px 10px 0px 0px;
 }
+.btn-create-new-atm:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
 .form-control-des-new-atm {
     display: block;
     width: 100%;
@@ -116,15 +123,22 @@ label {
 .btn-submit-atm {
     background-color: var(--primary-color);
     color: white;
-    width: 150px;
-    height: 40px;
+    width: 80px;
+    height: 30px;
     border: none;
     border-radius: 4px;
-    font-size: large;
+    /* font-size: large; */
     cursor: pointer;
     position: relative;
-    left: 335px;
+    left: 408px;
     top: 10px;
+}
+.btn-submit-atm:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
 }
 /* start css delete */
 .background-delete-atm{
@@ -175,23 +189,16 @@ label {
     border: none;
     border-radius: 4px;
 }
+.btn-confirm-delete-atm:hover,
+.btn-cancel-delete-atm:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
 
 /* end css delete */
-:root {
-    /* ===== Colors ===== */
-    --body-color: #e4e9f7;
-    --sidebar-color: #fff;
-    --primary-color: #695cfe;
-    --primary-color-light: #f6f5ff;
-    --toggle-color: #ddd;
-    --text-color: #707070;
-
-    /* ====== Transition ====== */
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
 
     /* ====== view ====== */
 
@@ -205,26 +212,6 @@ label {
 .form{
   position: relative;
   top: 60px;
-}
-:root {
-    --body-color: #E4E9F7;
-    --sidebar-color: #FFF;
-    --primary-color: #695CFE;
-    --primary-color-light: #F6F5FF;
-    --toggle-color: #DDD;
-    --text-color: #707070;
-    --tran-03: all 0.2s ease;
-    --tran-03: all 0.3s ease;
-    --tran-04: all 0.3s ease;
-    --tran-05: all 0.3s ease;
-}
-:root {
-    --bs-breakpoint-xs: 0;
-    --bs-breakpoint-sm: 576px;
-    --bs-breakpoint-md: 768px;
-    --bs-breakpoint-lg: 992px;
-    --bs-breakpoint-xl: 1200px;
-    --bs-breakpoint-xxl: 1400px;
 }
 .row>* {
     flex-shrink: 0;
@@ -354,3 +341,125 @@ hr {
   color: black;
   border: 1px black solid;
 }
+/* start of css edit */
+.background-edit-atm{
+    width:99%; 
+    background:rgba(0,0,0,0.8);
+    height:99%;
+    position: absolute;
+    display: none;
+    bottom: 10px;
+}
+.content-edit-edit-atm {
+    width: 500px;
+    height: 420px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    position: relative;
+    left: 25%;
+    bottom: -120px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+        inset 0px -3px 6px -2px rgba(0, 0, 0, 0.3);
+}
+.name-edit-edit-atm {
+    padding: 10px 0px 0px 14px;
+    font-size: 20px;
+}
+.icon-cancel-edit-atm {
+    padding: 10px 14px 0px 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.form-control-edit-atm,
+.file {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 9px 9px 9px 9px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #6fb6df;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+.form-group-edit-atm {
+    padding: 7px 14px 3px 15px;
+}
+.btn-edit-edit-atm {
+    background-color: var(--primary-color);
+    color: white;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: large;
+    cursor: pointer;
+    margin: 0px 10px 0px 0px;
+}
+.btn-edit-edit-atm:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+.form-control-des-edit-atm {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0px 9px 40px 9px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #6fb6df;
+    border-radius: 0.25rem;
+    -webkit-transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+        -webkit-box-shadow 0.15s ease-in-out;
+}
+.btn-submit-atm-edit {
+    background-color: var(--primary-color);
+    color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    /* font-size: large; */
+    cursor: pointer;
+    position: relative;
+    left: 408px;
+    top: 10px;
+}
+.btn-submit-atm-edit:hover{
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: black;
+    border: black solid 1px;
+}
+
+/* end of css edit */

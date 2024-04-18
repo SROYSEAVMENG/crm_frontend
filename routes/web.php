@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CalendarController;
+use App\Models\Calendar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,5 +38,15 @@ Route::get('/drewTechnicalBTI',[HomeController::class,'drewTechnicalBTI']);
 Route::get('/service',[HomeController::class,'service']);
 Route::get('/manage',[HomeController::class,'manage']);
 Route::get('/permission',[HomeController::class,'permission']);
-
+Route::get('/viewReportPm',[HomeController::class,'viewReportPm']);
+Route::get('/viewReportBti',[HomeController::class,'viewReportBti']);
+Route::get('/listingServiceCustomer',[HomeController::class,'listingServiceCustomer']);
+Route::get('/listingCallCustomer',[HomeController::class,'listingCallCustomer']);
+Route::get('/listingAppointmentCustomer',[HomeController::class,'listingAppointmentCustomer']);
+Route::get('/calendar',[CalendarController::class,'calendar']);
+Route::get('/listingDocumentCustomer',[HomeController::class,'listingDocumentCustomer']);
+Route::get('/listingQuotationCustomer',[HomeController::class,'listingQuotationCustomer']);
+Route::get('/events',[CalendarController::class,'getEvents']);
+Route::get('/calendar/{id}',[CalendarController::class,'getEvents']);
+Route::get('/profile',[HomeController::class,'profile']);
 

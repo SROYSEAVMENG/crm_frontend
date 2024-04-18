@@ -153,6 +153,20 @@
                 <div style="float: left;"> <p class="nameList">LEAD</p></div>
                 <div style="float: right;">
                     <input class="search-box" type="search" placeholder="Search..."  />
+                    <div class="profile dropdown1" class="menu-view1 dropbtn1" onclick="myFunction1()">
+                      <img src="../image/staff.png" alt="">
+                      <div id="myDropdown1" class="dropdown-content1">
+                      <div class="text-center">
+                      <div class="profile1">
+                        <img  src="../image/staff.png" alt="">
+                    </div >
+                      </div>
+                      <div class="listing">
+                      <a href=""><i class='bx bx-user'></i>&nbsp;&nbsp;Profile</a>
+                      <a href=""><i class='bx bx-edit'></i>&nbsp;&nbsp;Change Password</a>
+                      </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,7 +194,7 @@
                               <i style="color: white;" class="fa fa-eye" aria-hidden="true"></i>            </button>
                             </span>
                           <span>
-                              <button class="btn-crud-list-lead" style="background-color: #67A7CC; border-radius: 4px;">
+                              <button class="btn-crud-list-lead btn-edit-lead" style="background-color: #67A7CC; border-radius: 4px;">
                               <i style="color: white;" class="fa fa-pencil fa-solid" aria-hidden="true"></i>            </button>
                             </span>
                             <span>
@@ -189,7 +203,10 @@
                             </span>
                       </td>
                     </tr>
+
                   </table>
+                  <div id="pagination-demo" class="pagination"></div>
+
                   <!-- form create Lead -->
 <div class="background-create-lead">
 <div class="content-create-new-lead-create">
@@ -384,10 +401,83 @@
             <div class="">
               <button type="button" class="btn-exit-lead-view">Exit</button>
             </div>
+            <div class="">
+              <button type="button" class="btn-convert-to-customer">Convert to customer</button>
+            </div>
+
           </div>
         </div>
     </div>
     <!------------ end of view customer ----------------->
+                  <!-- form edit Lead -->
+<div class="background-edit-lead">
+<div class="content-edit-new-lead-edit">
+    <div>
+        <div class="a">
+            <div class="name-new-new-lead-edit" style="float:left;">EDIT LEAD</div>
+            <div class="icon-cancel-new-lead-edit" style="float:right;"><span><i class="fa fa-times-circle-o close-create-lead" aria-hidden="true"></i></span>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <form action="#" class="signin-form">
+        <div class="form-group-new-lead-edit" style="float:left; ">
+            <label class="label" for="name-company">Name Company *</label>
+            <input type="text" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:right; ">
+            <label class="label" for="email-company">Email *</label>
+            <input type="email" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:left;">
+            <label class="label" for="phone-number-company">Phone Number *</label>
+            <input type="number" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:right;">
+            <label class="label" for="address-company">Address *</label>
+            <input type="text" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:left;">
+            <label class="label" for="city-company">City *</label>
+            <input type="text" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:right;">
+            <label class="label" for="service">Service *</label>
+            <input type="text" class="form-control-new-lead-edit"  required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:left;">
+            <label class="label" for="designation-company">Designation *</label>
+            <input type="text" class="form-control-new-lead-edit"  required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:right; width: 50%;">
+            <label class="label" for="edit-date-company">Create Date *</label>
+            <input type="date" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="float:left; width: 50%;">
+            <label  class="label" for="input-by">Sold by *</label>
+            <select name="input-by" class="form-control-new-lead-edit">
+              <option value=""></option>
+              <option value="Sale A">Sale A</option>
+              <option value="Sale B">Sale B</option>
+              <option value="Sale C">Sale C</option>
+            </select></div>
+            <div class="form-group-new-lead-edit" style="float:right; width: 50%;">
+            <label class="label" for="">Upload logo *</label>
+            <input type="file" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="width: 100%; " >
+            <label class="label" for="">Description *</label>
+            <input type="text" class="form-control-new-lead-edit" required>
+        </div>
+        <div class="form-group-new-lead-edit" style="padding: 20px 0px 0px 335px;" >
+            <button class="btn-save-edit-lead">SAVE </button>
+        </div>
+
+    </form>
+    
+</div>
+</div> 
+<!-- end of edit lead -->
 
 
                   
@@ -397,16 +487,7 @@
         </nav>
     </section>
     <script>
-
-        const dropWrapper = document.querySelectorAll('.drop-wrapper')
-        dropWrapper.forEach((element) => {
-            const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
-            const dropElement = document.getElementById(dropElementId)
-            element.addEventListener('click', function () {
-                dropElement.classList.toggle('show');
-            });
-        })
-        // start sidebar
+       // start sidebar
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
       toggle = body.querySelector(".toggle"),
@@ -462,9 +543,105 @@ modeSwitch.addEventListener("click" , () =>{
         pop_up33.style.display = "block"
         btn_cancel_view_lead.onclick = () => pop_up33.style.display = "none"
     }
+    let pop_up44 = document.querySelector(".background-edit-lead")
+    let btn_edit_lead = document.querySelector(".btn-edit-lead")
+    let btn_cancel_edit_lead = document.querySelector(".icon-cancel-new-lead-edit")
+
+    btn_edit_lead.onclick = () => {
+        pop_up44.style.display = "block"
+        btn_cancel_edit_lead.onclick = () => pop_up44.style.display = "none"
+    }
 
 
+    document.addEventListener("DOMContentLoaded", function() {
+    var items = Array.from(Array(30).keys()); // Example: Create an array of items (numbers 0 to 29)
+
+    var itemsPerPage = 5;
+    var currentPage = 1;
+
+    function displayItems(page) {
+        var startIndex = (page - 1) * itemsPerPage;
+        var endIndex = startIndex + itemsPerPage;
+        var displayedItems = items.slice(startIndex, endIndex);
+
+        console.log("Displaying items:", displayedItems);
+        // You can replace the console.log statement with code to display the items in your UI
+    }
+
+    function setActivePage(page) {
+        var buttons = document.querySelectorAll(".pagination button");
+        buttons.forEach(function(button) {
+            button.classList.remove("active");
+        });
+        var activeButton = document.querySelector(".pagination button[data-page='" + page + "']");
+        activeButton.classList.add("active");
+    }
+
+    function setupPagination() {
+        var totalPages = Math.ceil(items.length / itemsPerPage);
+        var paginationContainer = document.getElementById("pagination-demo");
+        paginationContainer.innerHTML = "";
+
+        for (var i = 1; i <= totalPages; i++) {
+            var button = document.createElement("button");
+            button.textContent = i;
+            button.setAttribute("data-page", i);
+            button.addEventListener("click", function() {
+                var page = parseInt(this.getAttribute("data-page"));
+                currentPage = page;
+                displayItems(currentPage);
+                setActivePage(currentPage);
+            });
+            paginationContainer.appendChild(button);
+        }
+
+        displayItems(currentPage);
+        setActivePage(currentPage);
+    }
+
+    setupPagination();
+});
+
+      // Start pf dropdown 
+      const dropWrapper = document.querySelectorAll('.drop-wrapper')
+      dropWrapper.forEach((element) => {
+          const dropElementId = 'drop-container-' + element.getAttribute('id').toString()
+          const dropElement = document.getElementById(dropElementId)
+          element.addEventListener('click', function () {
+              dropElement.classList.toggle('show');
+          });
+      })  //End dropdown pf
+      function myFunction1() {
+        document.getElementById("myDropdown1").classList.toggle("show");
+      }
     </script>
+
+    <style>
+          .pagination {
+    margin: 20px;
+}
+
+.pagination button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #0056b3;
+}
+
+.pagination .active {
+    background-color: #0056b3;
+}
+
+
+    </style>
 </body>
 
 </html>

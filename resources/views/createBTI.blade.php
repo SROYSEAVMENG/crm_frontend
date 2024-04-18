@@ -131,6 +131,16 @@
       </div>
       <hr>
     </page>
+    <div class="div-btn">
+    <div>
+      <button class="save-report-bti">SAVE</button>
+    </div>
+    <div>
+      <a href="technical">
+      <button class="exit-report-bti">EXIT</button>
+      </a>
+    </div>
+    </div>
 <script src="scrip.js"></script>
     <!-- <page size="A4"></page>
     <page size="A4" layout="landscape"></page>
